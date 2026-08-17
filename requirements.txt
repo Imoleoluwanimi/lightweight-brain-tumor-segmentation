@@ -1,7 +1,7 @@
 streamlit
-numpy
+numpy<2
 nibabel
-tensorflow
+tensorflow==2.16.2
 scikit-learn
 matplotlib
 scipy
