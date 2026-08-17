@@ -12,7 +12,10 @@ from tensorflow.keras.models import load_model
 from matplotlib import pyplot as plt
 from scipy.ndimage import zoom
 
-st.set_page_config(page_title="Glioma Segmentation", layout="wide")
+st.set_page_config(
+    page_title="Brain Tumor Segmentation Using 3D U-Net",
+    layout="wide"
+)
 
 BASE_DIR = Path(__file__).resolve().parent
 MODEL_PATH = BASE_DIR / "default_model.keras"
@@ -137,9 +140,11 @@ def visualize_results(cropped_input, prediction, ground_truth=None):
 
 
 def main():
-    st.title("3D Glioma Segmentation with U-Net")
-    st.write("Upload the four MRI modalities in NIfTI format to generate a glioma segmentation.")
-
+    st.title("Brain Tumor Segmentation Using 3D U-Net")
+    st.write(
+    "A lightweight 3D U-Net for brain tumor segmentation "
+    "designed to run on normal CPUs."
+    )
     with st.expander("How to use this app"):
         st.markdown(
             """
